@@ -1,0 +1,89 @@
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+// ==================================================================================================
+//
+// Typography
+// - Variables
+// - Mixns
+// - Primary (IBM Plex Sans Thai)
+// - Secondary (Sarabun)
+//
+// ==================================================================================================
+// //////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Variables
+// ============================================================
+// IBM Plex Sans Thai
+$font-family-primary: 'IBM Plex Sans Thai', sans-serif;
+$font-weight-primary-1: 400; // Regular
+$font-weight-primary-2: 700; // Bold
+$line-height-primary: 1.5;
+
+// Sarabun
+$font-family-secondary: 'Sarabun', sans-serif;
+$font-weight-secondary-1: 400; // Regular
+$font-weight-secondary-2: 700; // Bold
+$line-height-secondary: 1.5;
+
+// Mixins
+// ============================================================
+@mixin font-primary-base() {
+  font-family: $font-family-primary;
+  line-height: $line-height-primary;
+}
+
+@mixin font-secondary-base() {
+  font-family: $font-family-secondary;
+  line-height: $line-height-secondary;
+}
+
+// Primary (IBM Plex Sans Thai)
+//
+// Regular
+// @include font-primary-regular(16);
+//
+// Bold
+// @include font-primary-bold(16);
+//
+// ============================================================
+
+// Regular
+// ------------------------------
+@mixin font-primary-regular($font-size: 16) {
+  @include font-primary-base;
+  font-weight: $font-weight-primary-1;
+  font-size: rem($font-size);
+}
+
+// Bold
+// ------------------------------
+@mixin font-primary-bold($font-size: 16) {
+  @include font-primary-base;
+  font-weight: $font-weight-primary-2;
+  font-size: rem($font-size);
+}
+
+// Secondary (Sarabun)
+//
+// Regular
+// @include font-secondary-regular(16);
+//
+// Bold
+// @include font-secondary-bold(16);
+//
+// ============================================================
+
+// Regular
+// ------------------------------
+@mixin font-secondary-regular($font-size: 16) {
+  @include font-secondary-base;
+  font-weight: $font-weight-secondary-1;
+  font-size: rem($font-size);
+}
+
+// Bold
+// ------------------------------
+@mixin font-secondary-bold($font-size: 16) {
+  @include font-secondary-base;
+  font-weight: $font-weight-secondary-2;
+  font-size: rem($font-size);
+}
