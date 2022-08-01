@@ -1,9 +1,204 @@
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // ==================================================================================================
 //
-// Grid
+// Grid system
 //
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
+
+
+// m-xxsm
+// m-xsm
+// m-sm
+// m-md
+// m-lg
+// m-xlg
+// m-xxlg
+
+// t-xxsm
+// t-xsm
+// t-sm
+// t-md
+// t-lg
+// t-xlg
+
+// d-xxsm
+// d-xsm
+// d-sm
+// d-md
+// d-lg
+
+.box {
+  background-color: black;
+  color: white;
+}
+
+.gs {
+  /* Parent style   ------------------------------ */
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+
+  /* Children style ------------------------------ */
+  > .gs-col {
+    transition: $transition-elastic;
+
+    // Flex utilities
+    // .................................
+    &.is-grow {
+      flex: 1;
+    }
+
+    &.is-narrow {
+      flex: none;
+    }
+
+    // Flex number
+    // .................................
+    // @for $i from 1 through $grid-system {
+    //   &.is-f-#{$i} {
+    //     flex: $i;
+    //   }
+    // }
+
+    // @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
+    //   @media (min-width: $breakpoint-min) {
+    //     @for $i from 1 through $grid-system {
+    //       &.is-#{$breakpoint-name}-f-#{$i} {
+    //         flex: $i;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // Flex narrow for stack column
+    // .................................
+    // Max
+    @each $breakpoint-max, $breakpoint-name in $breakpoint-names {
+      @media (max-width: $breakpoint-max) {
+        &.is-#{$breakpoint-name}-stack {
+          flex: none;
+          width: 100%;
+        }
+      }
+    }
+
+    // Min & Max
+    // @each $breakpoint-min, $breakpoint-max, $breakpoint-name in $breakpoint-minmax-names {
+    //   @media (min-width: $breakpoint-min) and (max-width: $breakpoint-max - 1) {
+    //     &.is-#{$breakpoint-name}-stack {
+    //       flex: none;
+    //       width: 100%;
+    //     }
+    //   }
+    // }
+  }
+
+  /* Other component style ----------------------- */
+
+  /* Modifier style ------------------------------ */
+  // Flex percent
+  // .................................
+  &.is-cols {
+    > .gs-col {
+      @for $i from 0 through $grid-system - 1 {
+        &.is-#{$grid-system - $i} {
+          width: calc((100% * ($grid-system - $i)) / $grid-system);
+        }
+      }
+
+      @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
+        @media (min-width: $breakpoint-min) {
+          @for $i from 0 through $grid-system - 1 {
+            &.is-#{$breakpoint-name}-#{$grid-system - $i} {
+              width: calc((100% * ($grid-system - $i)) / $grid-system);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Gutter
+  // .................................
+  // Horizontal
+  @each $gutter-width, $gutter-name in $gutter-horizontal-names {
+    &.is-#{$gutter-name} {
+      margin-left: -$gutter-width;
+
+      > .gs-col {
+        padding-left: $gutter-width;
+      }
+    }
+  }
+
+  // Vertical
+  @each $gutter-height, $gutter-name in $gutter-vertical-names {
+    &.is-#{$gutter-name} {
+      margin-top: -$gutter-height;
+
+      > .gs-col {
+        margin-top: $gutter-height;
+      }
+    }
+  }
+
+  // For flex percent
+  @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
+    @media (min-width: $breakpoint-min) {
+      // Horizontal responsive
+      @each $gutter-width, $gutter-name in $gutter-horizontal-names {
+        &.is-#{$breakpoint-name}-#{$gutter-name} {
+          margin-left: -$gutter-width;
+
+          > .gs-col {
+            padding-left: $gutter-width;
+          }
+        }
+      }
+
+      // Vertical responsive
+      @each $gutter-height, $gutter-name in $gutter-vertical-names {
+        &.is-#{$breakpoint-name}-#{$gutter-name} {
+          margin-top: -$gutter-height;
+
+          > .gs-col {
+            margin-top: $gutter-height;
+          }
+        }
+      }
+    }
+  }
+
+  // For flex number
+  &:not(.is-cols) {
+    @each $breakpoint-max, $breakpoint-name in $breakpoint-names {
+      @media (max-width: $breakpoint-max) {
+        // Horizontal responsive
+        @each $gutter-width, $gutter-name in $gutter-horizontal-names {
+          &.is-#{$breakpoint-name}-#{$gutter-name} {
+            margin-left: -$gutter-width;
+
+            > .gs-col {
+              padding-left: $gutter-width;
+            }
+          }
+        }
+
+        // Vertical responsive
+        @each $gutter-height, $gutter-name in $gutter-vertical-names {
+          &.is-#{$breakpoint-name}-#{$gutter-name} {
+            margin-top: -$gutter-height;
+
+            > .gs-col {
+              margin-top: $gutter-height;
+            }
+          }
+        }
+      }
+    }
+  }
+}

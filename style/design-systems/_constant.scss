@@ -4,7 +4,9 @@
 // Other
 // - rem setting
 // - Z Index
-// - Media query
+// - Grid system
+// - Breakpoint
+// - Gutter
 // - Width, Height, Size
 // - Transition
 //
@@ -31,32 +33,138 @@ $z-index-9999: 9999;
 $z-index-10000: 10000;
 $z-index-10001: 10001;
 
-// Media query
+// Grid system
+// ============================================================
+$grid-system: 12;
+
+// Breakpoint
 // ============================================================
 // Mobile portrait
-$media-query-320: 320px;
-$media-query-360: 360px;
-$media-query-375: 375px;
-$media-query-414: 414px;
-$media-query-428: 428px;
+$breakpoint-320: 320px;
+$breakpoint-360: 360px;
+$breakpoint-375: 375px;
+$breakpoint-414: 414px;
+$breakpoint-428: 428px;
 // Mobile landscape
-$media-query-568: 568px;
-$media-query-667: 667px;
+$breakpoint-568: 568px;
+$breakpoint-667: 667px;
 // Tablet portrait
-$media-query-768: 768px;
-$media-query-834: 834px;
-$media-query-960: 960px;
+$breakpoint-768: 768px;
+$breakpoint-834: 834px;
+$breakpoint-960: 960px;
 // Tablet landscape
-$media-query-1024: 1024px;
-$media-query-1194: 1194px;
-$media-query-1280: 1280px;
+$breakpoint-1024: 1024px;
+$breakpoint-1194: 1194px;
+$breakpoint-1280: 1280px;
 // Desktop
-$media-query-1440: 1440px;
-$media-query-1536: 1536px;
-$media-query-1728: 1728px;
+$breakpoint-1366: 1366px;
+$breakpoint-1440: 1440px;
+$breakpoint-1536: 1536px;
+$breakpoint-1728: 1728px;
 // Large Desktop
-$media-query-1920: 1920px;
-$media-query-2560: 2560px;
+$breakpoint-1920: 1920px;
+$breakpoint-2560: 2560px;
+
+$breakpoint-names: (
+  // Mobile portrait
+  $breakpoint-320 "b320",
+  $breakpoint-360 "b360",
+  $breakpoint-375 "b375",
+  $breakpoint-414 "b414",
+  $breakpoint-428 "b428",
+  // Mobile landscape
+  $breakpoint-568 "b568",
+  $breakpoint-667 "b667",
+  // Tablet portrait
+  $breakpoint-768 "b768",
+  $breakpoint-834 "b834",
+  $breakpoint-960 "b960",
+  // Tablet landscape
+  $breakpoint-1024 "b1024",
+  $breakpoint-1194 "b1194",
+  $breakpoint-1280 "b1280",
+  // Desktop
+  $breakpoint-1366 "b1366",
+  $breakpoint-1440 "b1440",
+  $breakpoint-1536 "b1536",
+  $breakpoint-1728 "b1728",
+  // Large Desktop
+  $breakpoint-1920 "b1920",
+  $breakpoint-2560 "b2560"
+);
+
+$breakpoint-minmax-names: (
+  // Mobile portrait
+  $breakpoint-320 $breakpoint-360 "b320",
+  $breakpoint-360 $breakpoint-375 "b360",
+  $breakpoint-375 $breakpoint-414 "b375",
+  $breakpoint-414 $breakpoint-428 "b414",
+  $breakpoint-428 $breakpoint-568 "b428",
+  // Mobile landscape
+  $breakpoint-568 $breakpoint-667 "b568",
+  $breakpoint-667 $breakpoint-768 "b667",
+  // Tablet portrait
+  $breakpoint-768 $breakpoint-834 "b768",
+  $breakpoint-834 $breakpoint-960 "b834",
+  $breakpoint-960 $breakpoint-1024 "b960",
+  // Tablet landscape
+  $breakpoint-1024 $breakpoint-1194 "b1024",
+  $breakpoint-1194 $breakpoint-1280 "b1194",
+  $breakpoint-1280 $breakpoint-1366 "b1280",
+  // Desktop
+  $breakpoint-1366 $breakpoint-1440 "b1366",
+  $breakpoint-1440 $breakpoint-1536 "b1440",
+  $breakpoint-1536 $breakpoint-1728 "b1536",
+  $breakpoint-1728 $breakpoint-1920 "b1728",
+  $breakpoint-1920 $breakpoint-2560 "b1920"
+);
+
+// Gutter
+// ============================================================
+$gutter-8: rem(8);
+$gutter-16: rem(16);
+$gutter-24: rem(24);
+$gutter-32: rem(32);
+$gutter-40: rem(40);
+$gutter-48: rem(48);
+$gutter-56: rem(56);
+$gutter-64: rem(64);
+$gutter-72: rem(72);
+$gutter-80: rem(80);
+$gutter-88: rem(88);
+$gutter-96: rem(96);
+
+// Horizontal
+$gutter-horizontal-names: (
+  $gutter-8 "gx8",
+  $gutter-16 "gx16",
+  $gutter-24 "gx24",
+  $gutter-32 "gx32",
+  $gutter-40 "gx40",
+  $gutter-48 "gx48",
+  $gutter-56 "gx56",
+  $gutter-64 "gx64",
+  $gutter-72 "gx72",
+  $gutter-80 "gx80",
+  $gutter-88 "gx88",
+  $gutter-96 "gx96"
+);
+
+// Vertical
+$gutter-vertical-names: (
+  $gutter-8 "gy8",
+  $gutter-16 "gy16",
+  $gutter-24 "gy24",
+  $gutter-32 "gy32",
+  $gutter-40 "gy40",
+  $gutter-48 "gy48",
+  $gutter-56 "gy56",
+  $gutter-64 "gy64",
+  $gutter-72 "gy72",
+  $gutter-80 "gy80",
+  $gutter-88 "gy88",
+  $gutter-96 "gy96"
+);
 
 // Width, Height, Size
 // ============================================================
@@ -75,5 +183,5 @@ $modal-width-large: rem(960);
 
 // Transition
 // ============================================================
-$global-transition: all 0.3s ease;
-$elastic-transition: all 0.3s cubic-bezier(0.835, -0.005, 0.06, 1);
+$transition-global: all 0.3s ease;
+$transition-elastic: all 0.3s cubic-bezier(0.835, -0.005, 0.06, 1);

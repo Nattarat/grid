@@ -51,10 +51,89 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.min.css" />
+  <link rel="stylesheet" href="style/css/main.min.css" />
 </head>
 <body>
-  test
+  <div class="home">
+    <div class="home-container">
+      <div class="home-section is-content">
+        <h1>Grid system</h1>
+      </div>
+      <div class="home-section is-content">
+        <h2>Flex type</h2>
+      </div>
+      <div class="home-section is-content">
+        <ul>
+          <li>แบ่งและปรับความกว้างของ Column ได้แบบ Grow และ Narrow (* เฉพาะใน 1 Row เท่านั้น)</li>
+          <li>ไม่ยืดหยุ่นต่อการเปลี่ยนจำนวน Column ใน 1 Row ที่ Breakpoint ต่างๆ</li>
+          <li>มี Stack (Max width) ที่ Stack แล้ว Stack เลยที่ Breakpoint นั้นลงไป</li>
+          <li>Nesting ได้</li>
+          <li>เหมาะใช้กับ Layout ง่ายๆ ที่การ Responsive ไม่ซับซ้อน เช่น มี Stack ที่ Breakpoint เดียวเท่านั้น</li>
+        </ul>
+      </div>
+      <div class="home-section is-content">
+        <div class="gs is-b768-gx24 is-b1280-gx96 is-b768-gy24">
+          <div class="gs-col is-grow is-b768-stack"><div class="box">Col Grow</div></div>
+          <div class="gs-col is-grow is-b768-stack">
+            <div class="gs">
+              <div class="gs-col is-grow"><div class="box">CG 2.1</div></div>
+              <div class="gs-col is-grow"><div class="box">CG 2.2</div></div>
+              <div class="gs-col is-narrow"><div class="box">CN 2.3</div></div>
+            </div>
+          </div>
+          <div class="gs-col is-narrow is-b768-stack"><div class="box">Col Narrow</div></div>
+        </div>
+      </div>
+      <div class="home-section is-content">
+        <h2>Flex percent type</h2>
+      </div>
+      <div class="home-section is-content">
+        <ul>
+          <li>แบ่งและปรับความกว้างของ Column ได้ (Min width)</li>
+          <li>ยืดหยุ่นต่อการเปลี่ยนจำนวน Column</li>
+          <li>Stack โดยการเปลี่ยนความกว้างของ Column</li>
+          <li>Nesting ได้</li>
+          <li>เหมาะใช้กับ Layout ที่การ Responsive ซับซ้อนไปตาม Breakpoint ต่างๆ</li>
+        </ul>
+      </div>
+      <div class="home-section is-content">
+        <h3>Default</h3>
+      </div>
+      <div class="home-section is-content">
+        <div class="gs is-cols">
+          <div class="gs-col"><div class="box">Col 1</div></div>
+          <div class="gs-col"><div class="box">Col 2</div></div>
+          <div class="gs-col"><div class="box">Col 3</div></div>
+        </div>
+      </div>
+      <div class="home-section is-content">
+        <h3>Basic</h3>
+      </div>
+      <div class="home-section is-content">
+        <div class="gs is-cols">
+          <div class="gs-col is-4"><div class="box">Col 1</div></div>
+          <div class="gs-col is-4"><div class="box">Col 2</div></div>
+          <div class="gs-col is-4"><div class="box">Col 3</div></div>
+        </div>
+      </div>
+      <div class="home-section is-content">
+        <h3>Responsive (Min)</h3>
+      </div>
+      <div class="home-section is-content">
+        <div class="gs is-cols">
+          <div class="gs-col is-b320-12 is-b768-12 is-b1280-4">
+            <div class="gs is-cols">
+              <div class="gs-col is-4"><div class="box">Col 1.1</div></div>
+              <div class="gs-col is-4"><div class="box">Col 1.2</div></div>
+              <div class="gs-col is-4"><div class="box">Col 1.3</div></div>
+            </div>
+          </div>
+          <div class="gs-col is-b320-12 is-b768-6 is-b1280-4"><div class="box">Col 2</div></div>
+          <div class="gs-col is-b320-12 is-b768-6 is-b1280-4"><div class="box">Col 3</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
