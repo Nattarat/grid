@@ -6,36 +6,6 @@
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
-
-// m-xxsm
-// m-xsm
-// m-sm
-// m-md
-// m-lg
-// m-xlg
-// m-xxlg
-
-// t-xxsm
-// t-xsm
-// t-sm
-// t-md
-// t-lg
-// t-xlg
-
-// d-xxsm
-// d-xsm
-// d-sm
-// d-md
-// d-lg
-
-.box {
-  background-color: black;
-  color: white;
-}
-
 .gs {
   /* Parent style   ------------------------------ */
   display: flex;
@@ -54,6 +24,11 @@
 
     &.is-narrow {
       flex: none;
+    }
+
+    &.is-stack {
+      flex: none;
+      width: 100%;
     }
 
     // Flex narrow for stack column
@@ -169,6 +144,44 @@
             }
           }
         }
+      }
+    }
+  }
+
+  // Alignment
+  // .................................
+  &.is-start {
+    justify-content: flex-start;
+  }
+
+  &.is-end {
+    justify-content: flex-end;
+  }
+
+  &.is-center {
+    justify-content: center;
+  }
+
+  &.is-spacebetween {
+    justify-content: space-between;
+  }
+
+  @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
+    @media (min-width: $breakpoint-min) {
+      &.is-#{$breakpoint-name}-start {
+        justify-content: flex-start;
+      }
+
+      &.is-#{$breakpoint-name}-end {
+        justify-content: flex-end;
+      }
+
+      &.is-#{$breakpoint-name}-center {
+        justify-content: center;
+      }
+
+      &.is-#{$breakpoint-name}-spacebetween {
+        justify-content: space-between;
       }
     }
   }

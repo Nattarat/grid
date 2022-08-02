@@ -28,11 +28,6 @@ body {
   background: #1A1A1A;
 }
 
-.box {
-  background-color: black;
-  color: white;
-}
-
 .gs {
   /* Parent style   ------------------------------ */
   display: flex;
@@ -50,6 +45,10 @@ body {
 }
 .gs > .gs-col.is-narrow {
   flex: none;
+}
+.gs > .gs-col.is-stack {
+  flex: none;
+  width: 100%;
 }
 @media (max-width: 320px) {
   .gs > .gs-col.is-b320-stack {
@@ -6615,6 +6614,284 @@ body {
     margin-top: 6rem;
   }
 }
+.gs.is-start {
+  justify-content: flex-start;
+}
+.gs.is-end {
+  justify-content: flex-end;
+}
+.gs.is-center {
+  justify-content: center;
+}
+.gs.is-spacebetween {
+  justify-content: space-between;
+}
+@media (min-width: 320px) {
+  .gs.is-b320-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b320-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b320-center {
+    justify-content: center;
+  }
+  .gs.is-b320-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 360px) {
+  .gs.is-b360-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b360-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b360-center {
+    justify-content: center;
+  }
+  .gs.is-b360-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 375px) {
+  .gs.is-b375-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b375-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b375-center {
+    justify-content: center;
+  }
+  .gs.is-b375-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 414px) {
+  .gs.is-b414-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b414-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b414-center {
+    justify-content: center;
+  }
+  .gs.is-b414-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 428px) {
+  .gs.is-b428-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b428-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b428-center {
+    justify-content: center;
+  }
+  .gs.is-b428-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 568px) {
+  .gs.is-b568-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b568-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b568-center {
+    justify-content: center;
+  }
+  .gs.is-b568-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 667px) {
+  .gs.is-b667-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b667-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b667-center {
+    justify-content: center;
+  }
+  .gs.is-b667-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .gs.is-b768-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b768-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b768-center {
+    justify-content: center;
+  }
+  .gs.is-b768-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 834px) {
+  .gs.is-b834-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b834-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b834-center {
+    justify-content: center;
+  }
+  .gs.is-b834-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 960px) {
+  .gs.is-b960-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b960-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b960-center {
+    justify-content: center;
+  }
+  .gs.is-b960-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1024px) {
+  .gs.is-b1024-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b1024-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b1024-center {
+    justify-content: center;
+  }
+  .gs.is-b1024-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1194px) {
+  .gs.is-b1194-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b1194-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b1194-center {
+    justify-content: center;
+  }
+  .gs.is-b1194-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .gs.is-b1280-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b1280-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b1280-center {
+    justify-content: center;
+  }
+  .gs.is-b1280-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1366px) {
+  .gs.is-b1366-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b1366-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b1366-center {
+    justify-content: center;
+  }
+  .gs.is-b1366-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1440px) {
+  .gs.is-b1440-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b1440-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b1440-center {
+    justify-content: center;
+  }
+  .gs.is-b1440-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1536px) {
+  .gs.is-b1536-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b1536-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b1536-center {
+    justify-content: center;
+  }
+  .gs.is-b1536-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1728px) {
+  .gs.is-b1728-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b1728-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b1728-center {
+    justify-content: center;
+  }
+  .gs.is-b1728-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1920px) {
+  .gs.is-b1920-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b1920-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b1920-center {
+    justify-content: center;
+  }
+  .gs.is-b1920-spacebetween {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 2560px) {
+  .gs.is-b2560-start {
+    justify-content: flex-start;
+  }
+  .gs.is-b2560-end {
+    justify-content: flex-end;
+  }
+  .gs.is-b2560-center {
+    justify-content: center;
+  }
+  .gs.is-b2560-spacebetween {
+    justify-content: space-between;
+  }
+}
 
 .home .home-container {
   padding: 24px;
@@ -6630,4 +6907,8 @@ body {
 }
 .home .home-partition.is-subheading {
   border-top: 1px solid #111111;
+}
+.home .home-box {
+  background-color: #111111;
+  color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
