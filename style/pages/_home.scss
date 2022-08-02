@@ -24,6 +24,18 @@
       margin: 0 0 24px;
     }
   }
+
+  .home-partition {
+    margin: 0 0 24px;
+
+    &.is-heading {
+      border-top: 4px solid #111111;
+    }
+
+    &.is-subheading {
+      border-top: 1px solid #111111;
+    }
+  }
 }
 
 // Fix browser style

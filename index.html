@@ -59,9 +59,30 @@
       <div class="home-section is-content">
         <h1>Grid system</h1>
       </div>
+      <div class="home-partition is-heading"></div>
       <div class="home-section is-content">
-        <h2>Flex type</h2>
+        <h2>Name & Meaning</h2>
       </div>
+      <div class="home-partition is-subheading"></div>
+      <div class="home-section is-content">
+        <ul>
+          <li>gs = Grid system</li>
+          <li>gs-col = Grid system column</li>
+          <li>gx = Gutter x axis (horizontal spacing)</li>
+          <li>gy = Gutter y axis (vertical spacing)</li>
+          <li>stack = Full width column</li>
+          <li>b = Breakpoint (viwport width)</li>
+          <li>b768 = Breakpoint at 768px (viwport width at 768px)</li>
+          <li>b768-stack = Full width column at breakpoint 768px</li>
+          <li>b768-6 = 6/12 width column at breakpoint 768px</li>
+          <li>b768-gx24 = Gutter x axis 24px at breakpoint 768px</li>
+          <li>b768-gy24 = Gutter y axis 24px at breakpoint 768px</li>
+        </ul>
+      </div>
+      <div class="home-section is-content">
+        <h2>Flex grow & narrow</h2>
+      </div>
+      <div class="home-partition is-subheading"></div>
       <div class="home-section is-content">
         <ul>
           <li>แบ่งและปรับความกว้างของ Column ได้แบบ Grow และ Narrow (* เฉพาะใน 1 Row เท่านั้น)</li>
@@ -71,6 +92,47 @@
           <li>เหมาะใช้กับ Layout ง่ายๆ ที่การ Responsive ไม่ซับซ้อน เช่น มี Stack ที่ Breakpoint เดียวเท่านั้น</li>
         </ul>
       </div>
+      <div class="home-section is-content">
+        <h4>Grow & Narrow</h4>
+      </div>
+      <div class="home-section is-content">
+        <div class="gs">
+          <div class="gs-col is-grow">
+            <div class="box">Col Grow</div>
+          </div>
+          <div class="gs-col is-narrow">
+            <div class="box">Col Narrow</div>
+          </div>
+        </div>
+      </div>
+      <div class="home-section is-content">
+        <h4>Gutter horizontal</h4>
+      </div>
+      <div class="home-section is-content">
+        <div class="gs is-gx32">
+          <div class="gs-col is-grow">
+            <div class="box">Col Grow</div>
+          </div>
+          <div class="gs-col is-narrow">
+            <div class="box">Col Narrow</div>
+          </div>
+        </div>
+      </div>
+      <div class="home-section is-content">
+        <h4>Gutter vertical</h4>
+      </div>
+      <div class="home-section is-content">
+        <div class="gs is-gx32">
+          <div class="gs-col is-grow">
+            <div class="box">Col Grow</div>
+          </div>
+          <div class="gs-col is-narrow">
+            <div class="box">Col Narrow</div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="home-section is-content">
         <div class="gs is-b768-gx24 is-b1280-gx96 is-b768-gy24">
           <div class="gs-col is-grow is-b768-stack"><div class="box">Col Grow</div></div>
@@ -85,8 +147,9 @@
         </div>
       </div>
       <div class="home-section is-content">
-        <h2>Flex percent type</h2>
+        <h2>Flex percent</h2>
       </div>
+      <div class="home-partition is-subheading"></div>
       <div class="home-section is-content">
         <ul>
           <li>แบ่งและปรับความกว้างของ Column ได้ (Min width)</li>
@@ -97,7 +160,7 @@
         </ul>
       </div>
       <div class="home-section is-content">
-        <h3>Default</h3>
+        <h4>Default</h4>
       </div>
       <div class="home-section is-content">
         <div class="gs is-cols">
@@ -107,7 +170,7 @@
         </div>
       </div>
       <div class="home-section is-content">
-        <h3>Basic</h3>
+        <h4>Basic</h4>
       </div>
       <div class="home-section is-content">
         <div class="gs is-cols">
@@ -117,7 +180,7 @@
         </div>
       </div>
       <div class="home-section is-content">
-        <h3>Responsive (Min)</h3>
+        <h4>Responsive (Min)</h4>
       </div>
       <div class="home-section is-content">
         <div class="gs is-cols">
@@ -130,6 +193,70 @@
           </div>
           <div class="gs-col is-b320-12 is-b768-6 is-b1280-4"><div class="box">Col 2</div></div>
           <div class="gs-col is-b320-12 is-b768-6 is-b1280-4"><div class="box">Col 3</div></div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <div class="home-section is-content">
+        <h2>Sample using</h2>
+      </div>
+      <div class="home-partition is-subheading"></div>
+      <div class="home-section is-content">
+        <div class="gs is-cols is-gy24">
+          <div class="gs-col is-12">
+            <div class="gs">
+              <div class="gs-col is-Grow">
+                <div class="box">Grow</div>
+              </div>
+              <div class="gs-col is-Narrow">
+                <div class="box">Narrow</div>
+              </div>
+            </div>
+          </div>
+          <div class="gs-col is-12">
+            <div class="gs is-gx24">
+              <div class="gs-col is-Grow">
+                <div class="box">Grow</div>
+              </div>
+              <div class="gs-col is-Narrow">
+                <div class="box">Narrow</div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="gs-col is-12">
+            <div class="gs is-cols">
+              <div class="gs-col is-6">
+                <div class="box">Col 6</div>
+              </div>
+              <div class="gs-col is-4">
+                <div class="box">Col 4</div>
+              </div>
+              <div class="gs-col is-2">
+                <div class="box">Col 2</div>
+              </div>
+            </div>
+          </div>
+          <div class="gs-col is-12">
+            <div class="gs is-cols is-gx24">
+              <div class="gs-col is-6">
+                <div class="box">Col 6</div>
+              </div>
+              <div class="gs-col is-4">
+                <div class="box">Col 4</div>
+              </div>
+              <div class="gs-col is-2">
+                <div class="box">Col 2</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

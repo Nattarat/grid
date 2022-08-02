@@ -6621,4 +6621,13 @@ body {
 }
 .home .home-section.is-content {
   margin: 0 0 24px;
+}
+.home .home-partition {
+  margin: 0 0 24px;
+}
+.home .home-partition.is-heading {
+  border-top: 4px solid #111111;
+}
+.home .home-partition.is-subheading {
+  border-top: 1px solid #111111;
 }/*# sourceMappingURL=main.css.map */

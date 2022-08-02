@@ -56,27 +56,8 @@
       flex: none;
     }
 
-    // Flex number
-    // .................................
-    // @for $i from 1 through $grid-system {
-    //   &.is-f-#{$i} {
-    //     flex: $i;
-    //   }
-    // }
-
-    // @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
-    //   @media (min-width: $breakpoint-min) {
-    //     @for $i from 1 through $grid-system {
-    //       &.is-#{$breakpoint-name}-f-#{$i} {
-    //         flex: $i;
-    //       }
-    //     }
-    //   }
-    // }
-
     // Flex narrow for stack column
     // .................................
-    // Max
     @each $breakpoint-max, $breakpoint-name in $breakpoint-names {
       @media (max-width: $breakpoint-max) {
         &.is-#{$breakpoint-name}-stack {
@@ -85,16 +66,6 @@
         }
       }
     }
-
-    // Min & Max
-    // @each $breakpoint-min, $breakpoint-max, $breakpoint-name in $breakpoint-minmax-names {
-    //   @media (min-width: $breakpoint-min) and (max-width: $breakpoint-max - 1) {
-    //     &.is-#{$breakpoint-name}-stack {
-    //       flex: none;
-    //       width: 100%;
-    //     }
-    //   }
-    // }
   }
 
   /* Other component style ----------------------- */
@@ -146,7 +117,7 @@
     }
   }
 
-  // For flex percent
+  // Horizontal & Vertical reponsive (for flex percent)
   @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
     @media (min-width: $breakpoint-min) {
       // Horizontal responsive
@@ -173,7 +144,7 @@
     }
   }
 
-  // For flex number
+  // Horizontal & Vertical reponsive (for flex number)
   &:not(.is-cols) {
     @each $breakpoint-max, $breakpoint-name in $breakpoint-names {
       @media (max-width: $breakpoint-max) {
