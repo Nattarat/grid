@@ -121,6 +121,7 @@ $breakpoint-minmax-names: (
 
 // Gutter
 // ============================================================
+$gutter-0: 0;
 $gutter-8: rem(8);
 $gutter-16: rem(16);
 $gutter-24: rem(24);
@@ -136,6 +137,7 @@ $gutter-96: rem(96);
 
 // Horizontal
 $gutter-horizontal-names: (
+  $gutter-0 "gx0",
   $gutter-8 "gx8",
   $gutter-16 "gx16",
   $gutter-24 "gx24",
@@ -152,6 +154,7 @@ $gutter-horizontal-names: (
 
 // Vertical
 $gutter-vertical-names: (
+  $gutter-0 "gy0",
   $gutter-8 "gy8",
   $gutter-16 "gy16",
   $gutter-24 "gy24",

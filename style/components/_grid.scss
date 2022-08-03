@@ -15,59 +15,11 @@
   /* Children style ------------------------------ */
   > .gs-col {
     transition: $transition-elastic;
-
-    // Flex utilities
-    // .................................
-    &.is-grow {
-      flex: 1;
-    }
-
-    &.is-narrow {
-      flex: none;
-    }
-
-    &.is-stack {
-      flex: none;
-      width: 100%;
-    }
-
-    // Flex narrow for stack column
-    // .................................
-    @each $breakpoint-max, $breakpoint-name in $breakpoint-names {
-      @media (max-width: $breakpoint-max) {
-        &.is-#{$breakpoint-name}-stack {
-          flex: none;
-          width: 100%;
-        }
-      }
-    }
   }
 
   /* Other component style ----------------------- */
 
   /* Modifier style ------------------------------ */
-  // Flex percent
-  // .................................
-  &.is-cols {
-    > .gs-col {
-      @for $i from 0 through $grid-system - 1 {
-        &.is-#{$grid-system - $i} {
-          width: calc((100% * ($grid-system - $i)) / $grid-system);
-        }
-      }
-
-      @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
-        @media (min-width: $breakpoint-min) {
-          @for $i from 0 through $grid-system - 1 {
-            &.is-#{$breakpoint-name}-#{$grid-system - $i} {
-              width: calc((100% * ($grid-system - $i)) / $grid-system);
-            }
-          }
-        }
-      }
-    }
-  }
-
   // Gutter
   // .................................
   // Horizontal
@@ -88,62 +40,6 @@
 
       > .gs-col {
         margin-top: $gutter-height;
-      }
-    }
-  }
-
-  // Horizontal & Vertical reponsive (for flex percent)
-  @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
-    @media (min-width: $breakpoint-min) {
-      // Horizontal responsive
-      @each $gutter-width, $gutter-name in $gutter-horizontal-names {
-        &.is-#{$breakpoint-name}-#{$gutter-name} {
-          margin-left: -$gutter-width;
-
-          > .gs-col {
-            padding-left: $gutter-width;
-          }
-        }
-      }
-
-      // Vertical responsive
-      @each $gutter-height, $gutter-name in $gutter-vertical-names {
-        &.is-#{$breakpoint-name}-#{$gutter-name} {
-          margin-top: -$gutter-height;
-
-          > .gs-col {
-            margin-top: $gutter-height;
-          }
-        }
-      }
-    }
-  }
-
-  // Horizontal & Vertical reponsive (for flex number)
-  &:not(.is-cols) {
-    @each $breakpoint-max, $breakpoint-name in $breakpoint-names {
-      @media (max-width: $breakpoint-max) {
-        // Horizontal responsive
-        @each $gutter-width, $gutter-name in $gutter-horizontal-names {
-          &.is-#{$breakpoint-name}-#{$gutter-name} {
-            margin-left: -$gutter-width;
-
-            > .gs-col {
-              padding-left: $gutter-width;
-            }
-          }
-        }
-
-        // Vertical responsive
-        @each $gutter-height, $gutter-name in $gutter-vertical-names {
-          &.is-#{$breakpoint-name}-#{$gutter-name} {
-            margin-top: -$gutter-height;
-
-            > .gs-col {
-              margin-top: $gutter-height;
-            }
-          }
-        }
       }
     }
   }
@@ -182,6 +78,122 @@
 
       &.is-#{$breakpoint-name}-spacebetween {
         justify-content: space-between;
+      }
+    }
+  }
+
+  // Flex grow & narrow
+  // .................................
+  &.is-flexs {
+    > .gs-col {
+      // Flex utilities
+      // .................................
+      &.is-grow {
+        flex: 1;
+      }
+
+      &.is-narrow {
+        flex: none;
+      }
+
+      &.is-stack {
+        flex: none;
+        width: 100%;
+      }
+
+      // Flex responsive
+      // .................................
+      @each $breakpoint-max, $breakpoint-name in $breakpoint-names {
+        @media (max-width: $breakpoint-max) {
+          &.is-#{$breakpoint-name}-stack {
+            flex: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    // Gutter horizontal & vertical reponsive
+    // .................................
+    @each $breakpoint-width, $breakpoint-name in $breakpoint-names {
+      @media (min-width: $breakpoint-width) {
+        // Horizontal responsive
+        @each $gutter-width, $gutter-name in $gutter-horizontal-names {
+          &.is-#{$breakpoint-name}-#{$gutter-name} {
+            margin-left: -$gutter-width;
+
+            > .gs-col {
+              padding-left: $gutter-width;
+            }
+          }
+        }
+      }
+
+      @media (max-width: $breakpoint-width) {
+        // Vertical responsive
+        @each $gutter-height, $gutter-name in $gutter-vertical-names {
+          &.is-#{$breakpoint-name}-#{$gutter-name} {
+            margin-top: -$gutter-height;
+
+            > .gs-col {
+              margin-top: $gutter-height;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Flex percent
+  // .................................
+  &.is-cols {
+    > .gs-col {
+      // Column utilities
+      // .................................
+      @for $i from 0 through $grid-system - 1 {
+        &.is-#{$grid-system - $i} {
+          width: calc((100% * ($grid-system - $i)) / $grid-system);
+        }
+      }
+
+      // Column responsive
+      // .................................
+      @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
+        @media (min-width: $breakpoint-min) {
+          @for $i from 0 through $grid-system - 1 {
+            &.is-#{$breakpoint-name}-#{$grid-system - $i} {
+              width: calc((100% * ($grid-system - $i)) / $grid-system);
+            }
+          }
+        }
+      }
+    }
+
+    // Gutter horizontal & vertical reponsive
+    // .................................
+    @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
+      @media (min-width: $breakpoint-min) {
+        // Horizontal responsive
+        @each $gutter-width, $gutter-name in $gutter-horizontal-names {
+          &.is-#{$breakpoint-name}-#{$gutter-name} {
+            margin-left: -$gutter-width;
+
+            > .gs-col {
+              padding-left: $gutter-width;
+            }
+          }
+        }
+
+        // Vertical responsive
+        @each $gutter-height, $gutter-name in $gutter-vertical-names {
+          &.is-#{$breakpoint-name}-#{$gutter-name} {
+            margin-top: -$gutter-height;
+
+            > .gs-col {
+              margin-top: $gutter-height;
+            }
+          }
+        }
       }
     }
   }

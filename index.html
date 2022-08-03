@@ -68,6 +68,8 @@
       <div class="home-section is-content">
         <ul>
           <li>gs = Grid system</li>
+          <li>flexs = Grid system use flex grow and narrow</li>
+          <li>cols = Grid system use 12 columns (percent)</li>
           <li>gs-col = Grid system column</li>
           <li>gx = Gutter x axis (horizontal spacing)</li>
           <li>gy = Gutter y axis (vertical spacing)</li>
@@ -98,6 +100,7 @@
       <div class="home-partition is-subheading"></div>
       <div class="home-section is-content">
         <ul>
+          <li>gs & is-flexs / is-cols</li>
           <li>gs & is-cols / is-gx... (eg. is-gx8) / is-gy... (eg. is-gy8) / is-b...-gx... (eg. is-b768-gx8) / is-b...-gy... (eg. is-b768-gy8)</li>
           <li>gs-col & is-grow / is-narrow / is-b...-stack (eg. is-b768-stack)</li>
           <li>gs-col & is-... (eg. is-4) / is-b...-... (eg. is-b768-4)</li>
@@ -122,7 +125,7 @@
         <h4>Default</h4>
       </div>
       <div class="home-section is-content">
-        <div class="gs">
+        <div class="gs is-flexs">
           <div class="gs-col">
             <div class="home-box">Col</div>
           </div>
@@ -135,17 +138,17 @@
         <h4>Alignment</h4>
       </div>
       <div class="home-section is-content">
-        <div class="gs is-end">
+        <div class="gs is-flexs is-end">
           <div class="gs-col">
             <div class="home-box">Col end</div>
           </div>
         </div>
-        <div class="gs is-center">
+        <div class="gs is-flexs is-center">
           <div class="gs-col">
             <div class="home-box">Col center</div>
           </div>
         </div>
-        <div class="gs is-spacebetween">
+        <div class="gs is-flexs is-spacebetween">
           <div class="gs-col">
             <div class="home-box">Col spacebetween</div>
           </div>
@@ -158,7 +161,7 @@
         <h4>Grow & Narrow</h4>
       </div>
       <div class="home-section is-content">
-        <div class="gs">
+        <div class="gs is-flexs">
           <div class="gs-col is-grow">
             <div class="home-box">Col Grow</div>
           </div>
@@ -171,7 +174,7 @@
         <h4>Gutter horizontal</h4>
       </div>
       <div class="home-section is-content">
-        <div class="gs is-gx32">
+        <div class="gs is-flexs is-gx32">
           <div class="gs-col is-grow">
             <div class="home-box">Col Grow</div>
           </div>
@@ -184,7 +187,7 @@
         <h4>Gutter vertical</h4>
       </div>
       <div class="home-section is-content">
-        <div class="gs is-gy32">
+        <div class="gs is-flexs is-gy32">
           <div class="gs-col is-stack">
             <div class="home-box">Col Grow</div>
           </div>
@@ -197,17 +200,17 @@
         <h4>Responsive alignment</h4>
       </div>
       <div class="home-section is-content">
-        <div class="gs is-end is-b414-start is-b768-center">
+        <div class="gs is-flexs is-end is-b414-start is-b768-center">
           <div class="gs-col">
             <div class="home-box">Col</div>
           </div>
         </div>
-        <div class="gs is-center is-b768-end">
+        <div class="gs is-flexs is-center is-b768-end">
           <div class="gs-col">
             <div class="home-box">Col</div>
           </div>
         </div>
-        <div class="gs is-spacebetween is-b768-center">
+        <div class="gs is-flexs is-spacebetween is-b768-center">
           <div class="gs-col">
             <div class="home-box">Col</div>
           </div>
@@ -220,7 +223,7 @@
         <h4>Responsive</h4>
       </div>
       <div class="home-section is-content">
-        <div class="gs">
+        <div class="gs is-flexs">
           <div class="gs-col is-grow is-b768-stack">
             <div class="home-box">Col Grow</div>
           </div>
@@ -233,17 +236,33 @@
         <h4>Responsive gutter horizontal</h4>
       </div>
       <div class="home-section is-content">
-        ...
+        <div class="gs is-flexs is-gx32 is-b768-gx64">
+          <div class="gs-col is-grow">
+            <div class="home-box">Col Grow</div>
+          </div>
+          <div class="gs-col is-narrow">
+            <div class="home-box">Col Narrow</div>
+          </div>
+        </div>
       </div>
       <div class="home-section is-content">
         <h4>Responsive gutter vertical</h4>
       </div>
       <div class="home-section is-content">
-        ...
+        <div class="home-section is-content">
+          <div class="gs is-flexs is-gy32 is-b768-gy64">
+            <div class="gs-col is-stack">
+              <div class="home-box">Col Grow</div>
+            </div>
+            <div class="gs-col is-stack">
+              <div class="home-box">Col Narrow</div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Flex percent -->
       <div class="home-section is-content">
-        <h2>Flex percent</h2>
+        <h2>Flex 12 columns percent</h2>
       </div>
       <div class="home-partition is-subheading"></div>
       <div class="home-section is-content">
@@ -346,25 +365,72 @@
         <h4>Responsive alignment</h4>
       </div>
       <div class="home-section is-content">
-        ...
+        <div class="gs is-cols is-end is-b414-start is-b768-center">
+          <div class="gs-col">
+            <div class="home-box">Col</div>
+          </div>
+        </div>
+        <div class="gs is-cols is-center is-b768-end">
+          <div class="gs-col">
+            <div class="home-box">Col</div>
+          </div>
+        </div>
+        <div class="gs is-cols is-spacebetween is-b768-center">
+          <div class="gs-col">
+            <div class="home-box">Col</div>
+          </div>
+          <div class="gs-col">
+            <div class="home-box">Col</div>
+          </div>
+        </div>
       </div>
       <div class="home-section is-content">
-        <h4>Responsive</h4>
+        <h4>Responsive 12 Columns</h4>
       </div>
       <div class="home-section is-content">
-        ...
+        <div class="gs is-cols">
+          <div class="gs-col is-6 is-b768-12">
+            <div class="home-box">Col</div>
+          </div>
+          <div class="gs-col is-4 is-b768-6">
+            <div class="home-box">Col</div>
+          </div>
+          <div class="gs-col is-2 is-b768-6">
+            <div class="home-box">Col</div>
+          </div>
+        </div>
       </div>
       <div class="home-section is-content">
         <h4>Responsive gutter horizontal</h4>
       </div>
       <div class="home-section is-content">
-        ...
+        <div class="gs is-cols is-gx32 is-b768-gx64">
+          <div class="gs-col is-6">
+            <div class="home-box">Col 6</div>
+          </div>
+          <div class="gs-col is-4">
+            <div class="home-box">Col 4</div>
+          </div>
+          <div class="gs-col is-2">
+            <div class="home-box">Col 2</div>
+          </div>
+        </div>
       </div>
       <div class="home-section is-content">
         <h4>Responsive gutter vertical</h4>
       </div>
       <div class="home-section is-content">
-        ...
+        <div class="gs is-cols is-gy32 is-b768-gy64">
+          <div class="gs-col is-12">
+            <div class="home-box">Col</div>
+          </div>
+          <div class="gs-col is-12">
+            <div class="home-box">Col</div>
+          </div>
+          <div class="gs-col is-12">
+            <div class="home-box">Col</div>
+          </div>
+        </div>
       </div>
       <!-- Sample using -->
       <div class="home-section is-content">
@@ -374,31 +440,59 @@
       <div class="home-section is-content">
         <div class="gs is-cols is-gy24">
           <div class="gs-col is-12">
-            <div class="gs">
-              <div class="gs-col is-Grow">
+            <div class="home-section is-content">
+              <h5>Flex grow & narrow</h5>
+            </div>
+            <div class="gs is-flexs">
+              <div class="gs-col is-grow is-b414-stack">
                 <div class="home-box">Grow</div>
               </div>
-              <div class="gs-col is-Narrow">
-                <div class="home-box">Narrow</div>
+              <div class="gs-col is-narrow is-b414-stack">
+                <div class="gs is-flexs">
+                  <div class="gs-col is-narrow is-b768-stack">
+                    <div class="home-box">Narrow</div>
+                  </div>
+                  <div class="gs-col is-narrow is-b768-stack">
+                    <div class="home-box">Narrow</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="gs-col is-12">
-            <div class="gs is-gx24">
-              <div class="gs-col is-Grow">
+            <div class="gs is-flexs is-gx24 is-b414-gy24">
+              <div class="gs-col is-grow is-b414-stack">
                 <div class="home-box">Grow</div>
               </div>
-              <div class="gs-col is-Narrow">
-                <div class="home-box">Narrow</div>
+              <div class="gs-col is-narrow is-b414-stack">
+                <div class="gs is-flexs is-b360-gy24">
+                  <div class="gs-col is-narrow is-b768-stack">
+                    <div class="home-box">Narrow</div>
+                  </div>
+                  <div class="gs-col is-narrow is-b768-stack">
+                    <div class="home-box">Narrow</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-
           <div class="gs-col is-12">
+            <div class="home-section is-content">
+              <h5>Flex 12 columns percent</h5>
+            </div>
             <div class="gs is-cols">
               <div class="gs-col is-6">
-                <div class="home-box">Col 6</div>
+                <div class="gs is-cols">
+                  <div class="gs-col is-12 is-b768-4 is-b1024-6">
+                    <div class="home-box">Col</div>
+                  </div>
+                  <div class="gs-col is-12 is-b768-4 is-b1024-6">
+                    <div class="home-box">Col</div>
+                  </div>
+                  <div class="gs-col is-12 is-b768-4 is-b1024-6">
+                    <div class="home-box">Col</div>
+                  </div>
+                </div>
               </div>
               <div class="gs-col is-4">
                 <div class="home-box">Col 4</div>
@@ -411,13 +505,53 @@
           <div class="gs-col is-12">
             <div class="gs is-cols is-gx24">
               <div class="gs-col is-6">
-                <div class="home-box">Col 6</div>
+                <div class="gs is-cols is-gx24 is-b1024-gx0 is-gy24 is-b1024-gy0">
+                  <div class="gs-col is-12 is-b768-4 is-b1024-6">
+                    <div class="home-box">Col</div>
+                  </div>
+                  <div class="gs-col is-12 is-b768-4 is-b1024-6">
+                    <div class="home-box">Col</div>
+                  </div>
+                  <div class="gs-col is-12 is-b768-4 is-b1024-6">
+                    <div class="home-box">Col</div>
+                  </div>
+                </div>
               </div>
               <div class="gs-col is-4">
                 <div class="home-box">Col 4</div>
               </div>
               <div class="gs-col is-2">
                 <div class="home-box">Col 2</div>
+              </div>
+            </div>
+          </div>
+          <div class="gs-col is-12">
+            <div class="home-section is-content">
+              <h5>Flex grow & narrow + Flex 12 columns percent</h5>
+            </div>
+            <div class="gs is-flexs">
+              <div class="gs-col is-grow">
+                <div class="gs is-cols">
+                  <div class="gs-col is-6">
+                    <div class="home-box">Col_6</div>
+                  </div>
+                  <div class="gs-col is-4">
+                    <div class="home-box">Col_4</div>
+                  </div>
+                  <div class="gs-col is-2">
+                    <div class="home-box">Col_2</div>
+                  </div>
+                </div>
+              </div>
+              <div class="gs-col is-grow">
+                <div class="gs is-flexs">
+                  <div class="gs-col is-grow">
+                    <div class="home-box">Grow</div>
+                  </div>
+                  <div class="gs-col is-narrow">
+                    <div class="home-box">Narrow</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
