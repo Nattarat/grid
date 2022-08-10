@@ -39,7 +39,7 @@
       margin-top: -$gutter-height;
 
       > .gs-col {
-        margin-top: $gutter-height;
+        padding-top: $gutter-height;
       }
     }
   }
@@ -108,14 +108,6 @@
 
       // Flex responsive
       // .................................
-      // @each $breakpoint-max, $breakpoint-name in $breakpoint-names {
-      //   @media (max-width: $breakpoint-max) {
-      //     &.is-#{$breakpoint-name}-stack {
-      //       flex: none;
-      //       width: 100%;
-      //     }
-      //   }
-      // }
       @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
         @media (min-width: $breakpoint-min) {
           &.is-#{$breakpoint-name}-stack {
@@ -159,24 +151,11 @@
             margin-top: -$gutter-height;
 
             > .gs-col {
-              margin-top: $gutter-height;
+              padding-top: $gutter-height;
             }
           }
         }
       }
-
-      // @media (max-width: $breakpoint-width) {
-      //   // Vertical responsive
-      //   @each $gutter-height, $gutter-name in $gutter-vertical-names {
-      //     &.is-#{$breakpoint-name}-#{$gutter-name} {
-      //       margin-top: -$gutter-height;
-
-      //       > .gs-col {
-      //         margin-top: $gutter-height;
-      //       }
-      //     }
-      //   }
-      // }
     }
   }
 
@@ -226,7 +205,7 @@
             margin-top: -$gutter-height;
 
             > .gs-col {
-              margin-top: $gutter-height;
+              padding-top: $gutter-height;
             }
           }
         }
