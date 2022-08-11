@@ -62,6 +62,22 @@
     justify-content: space-between;
   }
 
+  &.is-alignitems-start {
+    align-items: flex-start;
+  }
+
+  &.is-alignitems-end {
+    align-items: flex-end;
+  }
+
+  &.is-alignitems-center {
+    align-items: center;
+  }
+
+  &.is-alignitems-spacebetween {
+    align-items: space-between;
+  }
+
   @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
     @media (min-width: $breakpoint-min) {
       &.is-#{$breakpoint-name}-start {
