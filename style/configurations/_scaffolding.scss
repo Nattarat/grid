@@ -7,29 +7,29 @@
 // ==================================================================================================
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 
-// html {
-//   overflow-y: auto;
-//   min-width: 1px;
-//   background-color: $color-primary-white;
-//   font-size: $rem; // rem setting
-// }
+html {
+  overflow-y: auto;
+  min-width: 1px;
+  background-color: $color-primary-white;
+  font-size: $rem; // rem setting
+}
 
-// body {
-//   @include font-primary-regular(16);
-//   touch-action: manipulation; // Fix double tab to zoom in iOS
-//   color: $color-primary-gray;
-// }
+body {
+  @include font-primary-regular(16);
+  touch-action: manipulation; // Fix double tab to zoom in iOS
+  color: $color-primary-gray;
+}
 
-// .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-//   margin-bottom: 0;
-// }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
 
-// ::-moz-selection {
-//   color: $color-primary-white;
-//   background: $color-primary-gray;
-// }
+::-moz-selection {
+  color: $color-primary-white;
+  background: $color-primary-gray;
+}
 
-// ::selection {
-//   color: $color-primary-white;
-//   background: $color-primary-gray;
-// }
+::selection {
+  color: $color-primary-white;
+  background: $color-primary-gray;
+}
