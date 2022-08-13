@@ -145,34 +145,6 @@
         }
       }
     }
-
-    // Gutter horizontal & vertical reponsive
-    // .................................
-    @each $breakpoint-width, $breakpoint-name in $breakpoint-names {
-      @media (min-width: $breakpoint-width) {
-        // Horizontal responsive
-        @each $gutter-width, $gutter-name in $gutter-horizontal-names {
-          &.is-#{$breakpoint-name}-#{$gutter-name} {
-            margin-left: -$gutter-width;
-
-            > .gs-col {
-              padding-left: $gutter-width;
-            }
-          }
-        }
-
-        // Vertical responsive
-        @each $gutter-height, $gutter-name in $gutter-vertical-names {
-          &.is-#{$breakpoint-name}-#{$gutter-name} {
-            margin-top: -$gutter-height;
-
-            > .gs-col {
-              padding-top: $gutter-height;
-            }
-          }
-        }
-      }
-    }
   }
 
   // Flex percent
@@ -199,7 +171,12 @@
         }
       }
     }
+  }
 
+  // Flex grow & narrow + Flex percent
+  // .................................
+  &.is-flexs,
+  &.is-cols {
     // Gutter horizontal & vertical reponsive
     // .................................
     @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
