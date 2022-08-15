@@ -24,6 +24,10 @@ body {
   margin-bottom: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 ::-moz-selection {
   color: $color-primary-white;
   background: $color-primary-gray;

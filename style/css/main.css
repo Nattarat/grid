@@ -18,6 +18,10 @@ body {
   margin-bottom: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 ::-moz-selection {
   color: #FFFFFF;
   background: #1A1A1A;
@@ -50,4 +54,31 @@ body {
 }
 .home .home-box.is-highlight {
   background-color: #FF0000;
+}
+
+.example .example-container {
+  padding: 24px;
+}
+.example .example-section.is-content {
+  margin: 0 0 24px;
+}
+.example .example-partition {
+  margin: 0 0 24px;
+}
+.example .example-partition.is-heading {
+  border-top: 4px solid #111111;
+}
+.example .example-partition.is-subheading {
+  border-top: 1px solid #111111;
+}
+.example .example-box {
+  padding: 8px 8px 6px;
+  background-color: #111111;
+  color: #FFFFFF;
+}
+.example .example-box.is-highlight {
+  background-color: #FF0000;
+}
+.example .example-link.is-wrapper {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

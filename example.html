@@ -1,0 +1,243 @@
+<html lang="en">
+<head>
+  <title>Grid</title>
+
+  <!-- HTML Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, noodp">
+  <meta name="googlebot" content="index, follow">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="CSS classes for flexible grid system.">
+  <meta name="keywords" content="Grid">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="static/favicons/favicon.ico">
+  <link rel="icon" sizes="32x32" type="image/ico" href="static/favicons/favicon.ico">
+  <link rel="icon" sizes="48x48" type="image/png" href="static/favicons/favicon@xs.png">
+  <link rel="icon" sizes="96x96" type="image/png" href="static/favicons/favicon@sm.png">
+  <link rel="icon" sizes="144x144" type="image/png" href="static/favicons/favicon@md.png">
+  <link rel="icon" sizes="192x192" type="image/png" href="static/favicons/favicon@lg.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="static/favicons/touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="static/favicons/touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="static/favicons/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="static/favicons/touch-icon-ipad-retina.png">
+
+  <!-- Facebook OpenGraph Meta Tags -->
+  <!-- <meta property="og:url" content="https://username.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nattarat Srila | UX/UI Designer">
+  <meta property="og:image" content="https://i.imgur.com/BbrijGK.png">
+  <meta property="og:description" content="I'm a UX/UI designer who is interested in design systems, usability interaction, and CSS."> -->
+
+  <!-- Twitter OpenGraph Meta Tags -->
+  <!-- <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="nattarat.github.io">
+  <meta property="twitter:url" content="https://nattarat.github.io/">
+  <meta name="twitter:title" content="Nattarat Srila | UX/UI Designer">
+  <meta name="twitter:description" content="I'm a UX/UI designer who is interested in design systems, usability interaction, and CSS.">
+  <meta name="twitter:image" content="https://i.imgur.com/BbrijGK.png"> -->
+
+  <!-- Manifest -->
+  <!-- <link rel="manifest" href="static/manifest.json"> -->
+
+  <!-- URL bar color for mobile browser -->
+  <!-- <meta name="theme-color" content="#FFFFFF"> -->
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;700&family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/css/grid.min.css" />
+  <link rel="stylesheet" href="style/css/main.min.css" />
+</head>
+<body>
+  <div class="example">
+    <div class="example-container">
+      <div class="example-section is-content">
+        <h1>Example</h1>
+      </div>
+      <div class="example-partition is-heading"></div>
+      <!-- Responsive -->
+      <div class="example-section is-content">
+        <h2>Responsive advanced</h2>
+      </div>
+      <div class="example-partition is-subheading"></div>
+      <div class="example-section is-content">
+        <a class="example-link is-wrapper" href="static/images/contents/example-responsive-advanced.png" target="_blank">
+          <img src="static/images/contents/example-responsive-advanced.png" alt="Example responsive" />
+        </a>
+      </div>
+      <div class="example-section is-content">
+        <h4>Grid system : gs-flexs</h4>
+      </div>
+      <div class="example-section is-content">
+        <!-- Step mobile to desktop -->
+        <!-- ================================================== -->
+        <!-- Step: 1 <= 414px to 767px -->
+        <div class="gs is-flexs is-gy16">
+          <div class="gs-col is-stack is-o3">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-stack is-o2">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-stack is-o1">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div>
+        <!-- Step: 2 >= 768px -->
+        <!-- <div class="gs is-flexs is-gy16 is-b768-gx32">
+          <div class="gs-col is-stack is-o3 is-b768-o2 is-b768-row">
+            <div class="example-box is-narrow is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-stack is-grow is-o2 is-b768-o1 is-b768-row">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-stack is-narrow is-o1 is-b768-o3 is-b768-row">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+        <!-- Step: 3 >= 1024px -->
+        <!-- <div class="gs is-flexs is-gy16 is-b768-gx32 is-b1440-gx64">
+          <div class="gs-col is-stack is-o3 is-b768-o2 is-b1024-o1 is-b1440-o3 is-b768-row">
+            <div class="example-box is-narrow is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-stack is-grow is-o2 is-b768-o1 is-b1024-o2 is-b1440-o2 is-b768-row">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-stack is-narrow is-o1 is-b768-o3 is-b1440-o1 is-b1024-o3 is-b768-row">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+        <!-- Step: 4 >= 1440px -->
+        <!-- <div class="gs is-flexs is-gy16 is-b768-gx32 is-b1440-gx64">
+          <div class="gs-col is-stack is-o3 is-b768-o2 is-b1024-o1 is-b1440-o3 is-b768-row">
+            <div class="example-box is-narrow is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-stack is-grow is-o2 is-b768-o1 is-b1024-o2 is-b1440-o2 is-b768-row">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-stack is-narrow is-o1 is-b768-o3 is-b1440-o1 is-b1024-o3 is-b768-row">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+
+        <!-- Step desktop to mobile -->
+        <!-- ================================================== -->
+        <!-- Step: 1 >= 1440px -->
+        <!-- <div class="gs is-flexs is-gx64">
+          <div class="gs-col is-narrow is-o3">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-grow is-o2">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-narrow is-o1">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+        <!-- Step: 2 >= 1024px -->
+        <!-- <div class="gs is-flexs is-b1024-gx32 is-b1440-gx64">
+          <div class="gs-col is-narrow is-b1024-o1 is-b1440-o3">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-grow is-b1024-o2 is-b1440-o2">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-narrow is-b1024-o3 is-b1440-o1">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+        <!-- Step: 3 >= 768px -->
+        <!-- <div class="gs is-flexs is-b768-gx32 is-b1440-gx64">
+          <div class="gs-col is-narrow is-b768-o2 is-b1024-o1 is-b1440-o3">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-grow is-b768-o1 is-b1024-o2 is-b1440-o2">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-narrow is-b768-o3 is-b1024-o3 is-b1440-o1">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+        <!-- Step: 4 >= 414px -->
+        <!-- <div class="gs is-flexs is-gy16 is-b768-gx32 is-b1440-gx64">
+          <div class="gs-col is-narrow is-stack is-o3 is-b768-row is-b768-o2 is-b1024-o1 is-b1440-o3">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-grow is-stack is-o2 is-b768-row is-b768-o1 is-b1024-o2 is-b1440-o2">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-narrow is-stack is-o1 is-b768-row is-b768-o3 is-b1024-o3 is-b1440-o1">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+      </div>
+      <div class="example-section is-content">
+        <h4>Grid system : gs-cols</h4>
+      </div>
+      <div class="example-section">
+        <!-- Step mobile to desktop -->
+        <!-- ================================================== -->
+        <!-- Step: 1 <= 414px to 767px -->
+        <div class="gs is-cols is-gy16">
+          <div class="gs-col is-12 is-o3">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-12 is-o2">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-12 is-o1">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div>
+        <!-- Step: 2 >= 768px -->
+        <!-- <div class="gs is-cols is-b768-gx8 is-gy16">
+          <div class="gs-col is-12 is-b768-12 is-o3 is-b768-o1">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-12 is-b768-6 is-o2 is-b768-o2">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-12 is-b768-6 is-o1 is-b768-o3">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+        <!-- Step: 3 >= 1024px -->
+        <!-- <div class="gs is-cols is-b768-gx8 is-b1024-gx32 is-gy16 is-b1024-gy32">
+          <div class="gs-col is-12 is-b768-12 is-b1024-6 is-o3 is-b768-o1 is-b1024-o2">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-12 is-b768-6 is-o2 is-b768-o2 is-b1024-o1">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-12 is-b768-6 is-b1024-12 is-o1 is-b768-o3 is-b1024-o3">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+        <!-- Step: 4 >= 1440px -->
+        <!-- <div class="gs is-cols is-b768-gx8 is-b1024-gx32 is-gy16 is-b1024-gy32">
+          <div class="gs-col is-12 is-b768-12 is-b1024-6 is-b1440-4 is-o3 is-b768-o1 is-b1024-o2 is-b1440-o1">
+            <div class="example-box is-highlight">Column 1</div>
+          </div>
+          <div class="gs-col is-12 is-b768-6 is-b1440-4 is-o2 is-b768-o2 is-b1024-o1 is-b1440-o2">
+            <div class="example-box">Column 2</div>
+          </div>
+          <div class="gs-col is-12 is-b768-6 is-b1024-12 is-b1440-4 is-o1 is-b768-o3 is-b1024-o3 is-b1440-o3">
+            <div class="example-box">Column 3</div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.9.0/is.min.js"></script>
+  <script src="js/main.js"></script> -->
+</body>
+</html>
