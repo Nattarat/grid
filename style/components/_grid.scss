@@ -204,5 +204,26 @@
         }
       }
     }
+
+    // Order
+    // .................................
+    > .gs-col {
+      @for $i from 0 through $grid-system - 1 {
+        &.is-order#{$grid-system - $i} {
+          order: $grid-system - $i;
+        }
+      }
+
+      // Responsive
+      @each $breakpoint-min, $breakpoint-name in $breakpoint-names {
+        @media (min-width: $breakpoint-min) {
+          @for $i from 0 through $grid-system - 1 {
+            &.is-#{$breakpoint-name}-order#{$grid-system - $i} {
+              order: $grid-system - $i;
+            }
+          }
+        }
+      }
+    }
   }
 }

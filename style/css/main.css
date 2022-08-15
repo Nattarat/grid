@@ -47,4 +47,7 @@ body {
   padding: 8px 8px 6px;
   background-color: #111111;
   color: #FFFFFF;
+}
+.home .home-box.is-highlight {
+  background-color: #FF0000;
 }/*# sourceMappingURL=main.css.map */
